@@ -21,3 +21,46 @@
 // Stretch goal
 // Make the countdown live (show a countdown that updates several times a
 // second)
+
+
+const body = document.querySelector('body');
+const result = document.getElementById('result');
+const timeToClick = document.getElementById('time');
+
+let hasWon = false;
+let timeleft = Math.floor(Math.random() * 3 + 2);;
+
+function clickEvent() {
+  hasWon = true;
+  document.querySelector('p').hidden = true;
+  result.innerText = 'You Win!';
+  clearInterval(countdown);
+  body.removeEventListener('click', clickEvent);
+}
+
+let countdown = setInterval(function(){
+  timeleft--;
+
+  if (timeleft <= 0) {
+    clearInterval(countdown);
+  } else {
+    document.getElementById("time").innerHTML = timeleft;
+  }
+
+  console.log(timeleft);
+}, 1000);
+
+document.getElementById('time').innerText = timeleft;
+
+setTimeout(function () {
+  console.log('time up');
+
+  if (!hasWon) {
+    document.querySelector('p').hidden = true;
+    result.innerText = 'You Lose!';
+    body.removeEventListener('click', clickEvent);
+  }
+
+}, timeleft * 1000);
+
+body.addEventListener('click', clickEvent);

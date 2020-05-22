@@ -11,3 +11,14 @@
 // OPTIONAL
 // Feel free to add some CSS to this once you're done
 // --------------------------------------------------
+
+const body = document.querySelector('body');
+
+body.addEventListener('click', function(){
+  document.querySelector('body').innerHTML = '<h1>You finally clicked anywhere on the page - yay!!!!</h1>';
+  const h1 = document.querySelector('h1');
+  h1.style.color = 'red';
+  body.removeEventListener('click', function(){
+    return
+  });
+});

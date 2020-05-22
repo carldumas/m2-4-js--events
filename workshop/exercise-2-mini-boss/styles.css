@@ -1,0 +1,18 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: lightgray;
+  grid-template-rows: repeat(3, min-content)
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+}
+
+section {
+  height: 300px;
+  width: 100vw;
+}

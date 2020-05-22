@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='styles.css'>
+  <title>My App</title>
+</head>
+
+<body>
+  <div id='container'>
+    <section id='time'>
+    </section>
+    <section>
+      <div id='stopwatch'>
+        <time>00:00</time>
+      </div>
+      <button id="start">Start</button>
+      <button id="stop">Stop</button>
+      <button id="reset">Reset</button>
+    </section>
+    <section>
+      <form name="submitForm" onsubmit="submitUserTime(event)">
+        <label type="text" for="user-time">Add your time!</label>
+        <input type="number" id="countdown-second" placeholder="0">
+        <input type="submit" id="start-countdown" onclick="startCountdown()">
+        <span id='countdownTimer'>0</span>
+      </form>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

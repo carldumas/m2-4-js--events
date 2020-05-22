@@ -2,14 +2,27 @@
 <html>
 
 <head>
-    <style>
+  <style>
+    body {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: lightgray;
+    }
 
-    </style>
+    .result {
+      font-size: 32px;
+      text-transform: uppercase;
+      color: red;
+    }
+  </style>
 </head>
 <body>
-    <p class="time-text">You have <span id="time"></span> seconds to click</p>
-    <p class="result" id="result"></p>
-    <script src="app.js"></script>
+  <p class="time-text">You have <span id="time"></span> seconds to click</p>
+  <p class="result" id="result"></p>
+  <script src="app.js"></script>
 </body>
 
 </html>

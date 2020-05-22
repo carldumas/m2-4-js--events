@@ -1,0 +1,27 @@
+/* maybe consider putting them in a grid?) */
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
+  height: 100px;
+  width: 100px;
+  background: #990000;
+  border-radius: 50%;
+  position: absolute;
+  color: white;
+  font-family: cursive;
+  font-size: 32px;
+  border: none;
+  box-shadow: none;
+  margin: 1px;
+  outline: none;
+  cursor: pointer;
+}
+
+.green {
+  background: #005900;
+}
